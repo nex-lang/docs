@@ -23,7 +23,7 @@ Every program requires one main entry program at the top-level `: fn main()` fun
 Variables can be declared according to their types `var`, `const` and `mut`. Type inference, multiple type specification and single type specification is all supported. Read more about this in [language::variables](/language/types/type-system)
 
 ```rust
-import fprint from std.io;
+@import fprint from std.io;
 
 : fn main => () {
     const: natural_ability = 10; // type is inferred to s_short int and neither value not type can be changed
