@@ -13,14 +13,14 @@
       { "title": "Metadata", "url": "syntax-basics/metadata" },
       { "title": "Libraries & Imports", "url": "syntax-basics/libraries-and-imports" },
       { "title": "Keywords", "url": "syntax-basics/keywords" },
-      { "title": "Mutability", "url": "syntax-basics/mutability" },
+      { "title": "Mutability", "url": "syntax-basics/mutability" }
     ]
   },
   {
     "title": "Types",
     "url": "types/",
     "children": [
-      { "title": "Built-in types", "url": "types/built-in-types" },,
+      { "title": "Built-in types", "url": "types/built-in-types" },
       { "title": "Typedefs", "url": "types/typedefs" },
       { "title": "Type system", "url": "types/type-system" }
     ]
@@ -48,7 +48,7 @@
       { "title": "Extend a class", "url": "classes-and-objects/extend-a-class" },
       { "title": "Structures", "url": "classes-and-objects/structures" },
       { "title": "Enums", "url": "classes-and-objects/enums" },
-      { "title": "Attributes", "url": "classes-and-objects/attributes" },
+      { "title": "Attributes", "url": "classes-and-objects/attributes" }
     ]
   }
 ]
