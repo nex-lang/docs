@@ -4,6 +4,7 @@ This page provides a brief introduction to the Nex language through samples of i
 
 To learn more about the language, and find a more interactive cheat sheet, refer to [language::/](language/)
 
+---
 
 ## Hello World
 
