@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Introduction",
+    "url": "introduction"
+  },
+  {
+    "title": "Syntax basics",
+    "url": "syntax-basics/",
+    "children": [
+      { "title": "Variables", "url": "syntax-basics/variables" },
+      { "title": "Operators", "url": "syntax-basics/operators" },
+      { "title": "Comments", "url": "syntax-basics/comments" },
+      { "title": "Metadata", "url": "syntax-basics/metadata" },
+      { "title": "Libraries & Imports", "url": "syntax-basics/libraries-and-imports" },
+      { "title": "Keywords", "url": "syntax-basics/keywords" },
+      { "title": "Mutability", "url": "syntax-basics/mutability" },
+    ]
+  },
+  {
+    "title": "Types",
+    "url": "types/",
+    "children": [
+      { "title": "Built-in types", "url": "types/built-in-types" },,
+      { "title": "Typedefs", "url": "types/typedefs" },
+      { "title": "Type system", "url": "types/type-system" }
+    ]
+  },
+  {
+    "title": "Functions",
+    "url": "functions/",
+    "children": [
+      { "title": "Control flow", "url": "functions/control-flow" },
+      { "title": "Loops", "url": "functions/loops" },
+      { "title": "Branches", "url": "functions/branches" }
+    ]
+  },
+  {
+    "title": "Error handling",
+    "url": "error-handling"
+  },
+  {
+    "title": "Classes & objects",
+    "url": "classes-and-objects/",
+    "children": [
+      { "title": "Classes", "url": "classes-and-objects/classes" },
+      { "title": "Constructors", "url": "classes-and-objects/constructors" },
+      { "title": "Methods", "url": "classes-and-objects/methods" },
+      { "title": "Extend a class", "url": "classes-and-objects/extend-a-class" },
+      { "title": "Structures", "url": "classes-and-objects/structures" },
+      { "title": "Enums", "url": "classes-and-objects/enums" },
+      { "title": "Attributes", "url": "classes-and-objects/attributes" },
+    ]
+  }
+]
