@@ -61,11 +61,11 @@
     "title": "Core Packages",
     "url": "core-packages",
     "children": [
-          { "title": "I/O", "url": "language/core-packages/io" },
-          { "title": "Math", "url": "language/core-packages/math" },
-          { "title": "Networking", "url": "language/core-packages/net" },
-          { "title": "Graphics", "url": "language/core-packages/graphics" },
-          { "title": "Async", "url": "language/syntax-basics/async" },
+      { "title": "I/O", "url": "language/core-packages/io" },
+      { "title": "Math", "url": "language/core-packages/math" },
+      { "title": "Networking", "url": "language/core-packages/net" },
+      { "title": "Graphics", "url": "language/core-packages/graphics" },
+      { "title": "Async", "url": "language/syntax-basics/async" }
     ]
   },
   {
@@ -76,18 +76,18 @@
     "title": "Package Manager: Xen",
     "url": "package-manager",
     "children": [
-          { "title": "How to use packages", "url": "language/package-manager/use" },
-          { "title": "Writing packages", "url": "language/package-manager/write" },
-          {
-            "title": "Publishing packages", 
-            "url": "language/core-packages/publish",
-            "children": [
-              { "title": "Versioning", "url": "language/core-packages/publish/versioning" },
-              { "title": "Convention", "url": "language/core-packages/publish/convention" },
-              { "title": "Licenses", "url": "language/core-packages/publish/licence" },
-              { "title": "Security Advice", "url": "language/core-packages/security" }
-            ]
-          },
+      { "title": "How to use packages", "url": "language/package-manager/use" },
+      { "title": "Writing packages", "url": "language/package-manager/write" },
+      {
+        "title": "Publishing packages",
+        "url": "language/core-packages/publish",
+        "children": [
+          { "title": "Versioning", "url": "language/core-packages/publish/versioning" },
+          { "title": "Convention", "url": "language/core-packages/publish/convention" },
+          { "title": "Licenses", "url": "language/core-packages/publish/licence" },
+          { "title": "Security Advice", "url": "language/core-packages/security" }
+        ]
+      }
     ]
   }
 ]
