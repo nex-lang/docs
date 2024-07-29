@@ -8,7 +8,7 @@ To learn more about the language, and find a more interactive cheat sheet, refer
 
 ## Hello World
 
-Every program requires one main entry program at the top-level `: fn main()` function, where execution starts. Functions that don't explicitly return a value have the `void` return type. To display text on the console, you can use the `fprint()` function from std.io:
+Every program requires one main entry program at the top-level which is denoted by the **: fn main()** function, where execution starts. Functions that don't explicitly return a value have the **void** return type. To display text on the console, you can use the **fprint()** function from std.io:
 
 ```rust
 @import fprint from std.io;
@@ -20,7 +20,7 @@ Every program requires one main entry program at the top-level `: fn main()` fun
 
 ## Variables
 
-Variables can be declared according to their types `var`, `const` and `mut`. Type inferences and multiple type specifications are supported. Read more about this in [language::variables](/language/types/type-system)
+Variables can be declared according to their types **var**, **const** and **mut**. Type inferences and multiple type specifications are supported. Read more about this in [language::variables](/language/types/type-system)
 
 ```rust
 : fn main => () {
@@ -36,10 +36,10 @@ Variables can be declared according to their types `var`, `const` and `mut`. Typ
 
 ## Functions
 
-Functions can be declared using the `fn` keyword. Although type inference and multiple type specification work, it is recommended and good practice to specify the type of functions using a the same data specifiers followed by a colon and the function keyword , e.g. `int: fn`
+Functions can be declared using the **fn** keyword. Although type inference and multiple type specification work, it is recommended and good practice to specify the type of functions using a the same data specifiers followed by a colon and the function keyword , e.g. **int: fn**
 
 ### Parameters
-A function can easily define the parameters it requires by specifying the type and name of the parameter, e.g. `(int: x, str: y)`
+A function can easily define the parameters it requires by specifying the type and name of the parameter, e.g. **(int: x, str: y)**
 
 ```rust
 (long int, int): fn sum_xy => (int: x, int: y) {
