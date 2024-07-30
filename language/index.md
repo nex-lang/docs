@@ -6,21 +6,49 @@ To learn more about the language, and find a more interactive cheat sheet, refer
 
 ---
 
-## Hello World
+## Comments
+Nex supports single line and multi line comments
+```rust
+// This is a single line comment
 
-Every program requires one main entry program at the top-level which is denoted by the **: fn main()** function, where execution starts. Functions that don't explicitly return a value have the **void** return type. To display text on the console, you can use the **fprint()** function from std.io:
+/*
+This is
+a
+multi line comment
+*/
+```
+
+
+## Imports
+Use the **@import** keyword use functions, variables, methods and objects from local, public and standard libraries. Multiple items can be imported by sperating with **,** commas.  The use of **from** specifies the head module from which the submodule(s) will be imported. Similarly, the **as** gives the imported sub-module. It is important to note that **as alias1, alias2, ...** should be used while importing multiple modules from a single import statement.
 
 ```rust
-@import fprint from std.io;
 
+@import fprint from std.io; // fprint (function)
+
+@import math from std // std.math (lib) imports entire lib
+
+@import sin, cosin from std.math // functions sin and cosin can be used without refrencing the std.math library
+
+@import LocalClass from localfile as L // LocalClass from localfile.nex is imported as L
+
+```
+
+
+
+## The Main Entry Point
+
+Every program requires one main entry program at the top-level which is denoted by the **: fn main()** function, where execution starts. Functions that don't explicitly return a value have the **void** return type.
+
+```rust
 : fn main => ()  {
-  fprint('Hello, World!');
+  return 0;
 }
 ```
 
 ## Variables
 
-Variables can be declared according to their types **var**, **const** and **mut**. Type inferences and multiple type specifications are supported. Read more about this in [language::variables](/language/types/type-system)
+Variables can be declared according to their types **var**, **const** and **mut**. Type inferences and multiple type specifications are supported. Refer to [language::types::type-system](/language/types/type-system) for a detailed explanation
 
 ```rust
 : fn main => () {
@@ -36,13 +64,23 @@ Variables can be declared according to their types **var**, **const** and **mut*
 
 ## Functions
 
-Functions can be declared using the **fn** keyword. Although type inference and multiple type specification work, it is recommended and good practice to specify the type of functions using a the same data specifiers followed by a colon and the function keyword , e.g. **int: fn**
+To declare functions use the **fn** keyword. Although type inference and multiple type specification work, it is recommended and good practice to specify the type of functions using a the same data specifiers followed by a colon and the function keyword , e.g. **int: fn**
 
-### Parameters
+```rust
+int: fn return_0 => () {
+	return 0;
+}
+```
+
+
+### Function Parameters
 A function can easily define the parameters it requires by specifying the type and name of the parameter, e.g. **(int: x, str: y)**
 
 ```rust
-(long int, int): fn sum_xy => (int: x, int: y) {
+int : fn sum_xy => (int: x, int: y) {
     return x + y;
 }
 ```
+
+## Classes
+To define classes, use the **class** keyword.
