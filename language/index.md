@@ -135,14 +135,15 @@ This loop utilizes **:**, the range symbol. The range (`:`) makes it so that the
 Similarly, the **::** (iterate) symbol will make it so that the list/array after **::** is iterated over, and each value from the iterated array/list is incrementally set to the provided variable.
 
 ```rust
-var SomeComplexObject: x[5]; // assuming pre-defined
+var SomeComplexObject: x[5];
+var SomeComplexObject: obj; 
 
-for (var: obj :: x) {
+for (obj :: x) {
     // can access obj.(...) components and methods iteratively 
 }
 
-for (var: obj : 2) {
-    // obj is set to 1 on the first pass and 2 on the second pass 
+for (obj : x) {
+    // obj 0 -> len - 1, in this case: 0 to 5 
 }
 ```
 
@@ -150,6 +151,8 @@ for (var: obj : 2) {
 A while loop is yet another super-useful loop that allows for repetition in blocks of code. It has an expression that, when **expr == true**, the loop runs, and when **expr == false**, the loop stops.
 
 ```rust
+var int: x = 1; 
+
 while (x >= 100) {
     x += 1;
 }
@@ -181,10 +184,10 @@ The **switch** statement evaluates the provided expression and compares it with 
 If there is a match, the statements of the label are executed. The code runs until it finds a **break;** statement, and if none of the labels match, the **default** label is invoked.
 
 ```rust
-var: options = 2;
-var: operation;
+var int: options = 2;
+var str: operation;
 
-switch () {
+switch (options) {
     case 1:
         operation = "multiplication";
         break;
@@ -201,14 +204,14 @@ The **try** statement is used to test a block of code for errors and custom hand
 ```rust
 @import fprint, read from std.io;
 
-var str: buf;
+var str: buffer;
 
 try {
-    buf = read("data.csv");
+    buffer = read("data.csv");
 } except std.io.FileNotFound {
-    buf = read("data.txt");
+    buffer = read("data.txt");
 } finally {
-    fprint(buf);
+    fprint(buffer);
 }
 ```
 
