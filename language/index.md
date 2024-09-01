@@ -36,7 +36,7 @@ Use the **@import** keyword to use functions, variables, methods, and objects fr
 Every program requires one main entry point at the top-level, which is denoted by the **: fn main()** function, where execution starts. Functions that don't explicitly return a value have the **void** return type.
 
 ```rust
-: fn main => () {
+: fn main () {
     return 0;
 }
 ```
@@ -46,7 +46,7 @@ Every program requires one main entry point at the top-level, which is denoted b
 Variables can be declared according to their types **var**, **const**, and **mut**. Type inferences and multiple type specifications are supported. Refer to [language::types::type-system](/language/types/type-system) for a detailed explanation.
 
 ```rust
-: fn main => () {
+: fn main () {
     const: natural_ability = 10; // type is inferred to s_short int and neither value nor type can be changed
     var s_short int: no_of_eyes = 2; // variable whose value can be changed within the s_short int range
     var: no_of_muscles = 600; // short int type is inferred and value can be changed within the short int range 
@@ -62,7 +62,7 @@ Variables can be declared according to their types **var**, **const**, and **mut
 To declare functions, use the **fn** keyword. Although type inference and multiple type specification work, it is recommended and good practice to specify the type of functions using the same data specifiers followed by a colon and the function keyword, e.g. **int: fn**.
 
 ```rust
-int: fn return_0 => () {
+int: fn return_0 () {
     return 0;
 }
 ```
@@ -71,7 +71,7 @@ int: fn return_0 => () {
 A function can easily define the parameters it requires by specifying the type and name of the parameter, e.g. **(int: x, str: y)**.
 
 ```rust
-int: fn sum_xy => (int: x, int: y) {
+int: fn sum_xy (int: x, int: y) {
     return x + y;
 }
 ```
@@ -80,7 +80,7 @@ int: fn sum_xy => (int: x, int: y) {
 To define classes, use the **class** keyword. Classes are reproducible objects and have two functions, **__init__** and **__free__**, by default. **__init__** is called when the class is instantiated, and **__free__** is called when the class is freed. A class can have its methods and components (functions and variables) defined with an access specifier (`pub`, `priv`). They can `ext` (extend and be extended) other classes and attributes.
 
 ```rust
-class A => {
+class A {
     var priv: component1;
 
     pub: fn get_component1 { return self.component1; };
@@ -90,7 +90,7 @@ class A => {
 Attributes are a group of methods and components that can be extended by both attributes and classes (Note: attributes can't extend classes). To define them, use the **attr** keyword. Attributes don't have **__init__** or **__free__** functions and just provide a group of methods and components for others to build upon.
 
 ```rust
-attr having_component_2 => {
+attr having_component_2 {
     var priv: component2;
 
     pub: fn get_component2 { return self.component2; };
@@ -236,14 +236,14 @@ struct Point {
     int: y;
 }
 
-: fn main => () {
+: fn main () {
     var Point: r = {x: 10, y: 20};
     return 0;
 }
 
 /* or,
 
-: fn main => () {
+: fn main () {
     var Point: p;
     p.x = 10;
     p.y = 20;
@@ -262,7 +262,7 @@ enum Direction {
     WEST;
 }
 
-: fn main => () {
+: fn main () {
     var Direction: dir = Direction.NORTH;
 
     switch (dir) {
