@@ -5,8 +5,8 @@ Writing clean and effective logical expressions is crucial for maintaining reada
 Choose variable names that clearly describe their purpose. This makes your logic more readable and easier to understand.
 
 ```rust
-var int: age = 25;
-var int: minimum_driving_age = 18;
+var i32: age = 25;
+var i32: minimum_driving_age = 18;
 
 if (age >= minimum_driving_age) {
     // logic for allowing driving
@@ -17,8 +17,8 @@ if (age >= minimum_driving_age) {
 Avoid complex conditions by breaking them into simpler parts. Use intermediate variables if necessary.
 
 ```rust
-var int: temperature = 30;
-var int: threshold = 25;
+var i32: temperature = 30;
+var i32: threshold = 25;
 var bool: is_hot = temperature > threshold;
 
 if (is_hot) {
@@ -30,7 +30,7 @@ if (is_hot) {
 Deeply nested code can be hard to follow. Use early returns or break out complex logic into separate functions.
 
 ```rust
-: fn is_eligible_for_voting => (int: age) bool {
+: fn is_eligible_for_voting => (i32: age) bool {
     if (age < 18) {
         return false;
     }
@@ -38,7 +38,7 @@ Deeply nested code can be hard to follow. Use early returns or break out complex
 }
 
 : fn main => () {
-    var int: age = 20;
+    var i32: age = 20;
     if (is_eligible_for_voting(age)) {
         // logic for eligible voters
     }
@@ -88,8 +88,8 @@ if (is_raining && !has_umbrella) {
 Use named constants instead of magic numbers to make your logic more understandable.
 
 ```rust
-const int: MAX_SCORE = 100;
-var int: score = 85;
+const i32: MAX_SCORE = 100;
+var i32: score = 85;
 
 if (score >= MAX_SCORE) {
     // logic for max score

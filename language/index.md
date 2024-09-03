@@ -47,9 +47,9 @@ Variables can be declared according to their types **var**, **const**, and **mut
 
 ```rust
 : fn main () {
-    const: natural_ability = 10; // type is inferred to s_short int and neither value nor type can be changed
-    var s_short int: no_of_eyes = 2; // variable whose value can be changed within the s_short int range
-    var: no_of_muscles = 600; // short int type is inferred and value can be changed within the short int range 
+    const: natural_ability = 10; // type is inferred to s_short i32 and neither value nor type can be changed
+    var u8: no_of_eyes = 2; // variable whose value can be changed within the s_short i32 range
+    var: no_of_muscles = 600; // short i32 type is inferred and value can be changed within the short i32 range 
 
     mut: name = "Human"; // type is inferred to str, value and type can be changed
 
@@ -59,19 +59,19 @@ Variables can be declared according to their types **var**, **const**, and **mut
 
 ## Functions
 
-To declare functions, use the **fn** keyword. Although type inference and multiple type specification work, it is recommended and good practice to specify the type of functions using the same data specifiers followed by a colon and the function keyword, e.g. **int: fn**.
+To declare functions, use the **fn** keyword. Although type inference and multiple type specification work, it is recommended and good practice to specify the type of functions using the same data specifiers followed by a colon and the function keyword, e.g. **i32: fn**.
 
 ```rust
-int: fn return_0 () {
+i32: fn return_0 () {
     return 0;
 }
 ```
 
 ### Function Parameters
-A function can easily define the parameters it requires by specifying the type and name of the parameter, e.g. **(int: x, str: y)**.
+A function can easily define the parameters it requires by specifying the type and name of the parameter, e.g. **(i32: x, str: y)**.
 
 ```rust
-int: fn sum_xy (int: x, int: y) {
+i32: fn sum_xy (i32: x, i32: y) {
     return x + y;
 }
 ```
@@ -122,9 +122,9 @@ A for loop can be declared using the **for** keyword followed by certain conditi
 This loop consists of 3 expressions at its core: **initial; compare; update**. The loop starts off by executing the initialization expression, and the comparison expression is checked. If the comparison is false, the loop runs, and the update expression is executed. This process goes on until the comparison expression is true.
 
 ```rust
-var int: x = 0;
-// after int = 1, i++ and x += 1 (block) is run until i < 100 is false
-for (var int: i = 1; i < 100; i++) {
+var i32: x = 0;
+// after i32 = 1, i++ and x += 1 (block) is run until i < 100 is false
+for (var i32: i = 1; i < 100; i++) {
     x += i;
 }
 ```
@@ -151,7 +151,7 @@ for (obj : x) {
 A while loop is yet another super-useful loop that allows for repetition in blocks of code. It has an expression that, when **expr == true**, the loop runs, and when **expr == false**, the loop stops.
 
 ```rust
-var int: x = 1; 
+var i32: x = 1; 
 
 while (x >= 100) {
     x += 1;
@@ -166,7 +166,7 @@ Control statements provide a way for the computer to make decisions and perform 
 The **if... elif... else** statements are used to make decisions. **if** is an independent comparison that checks if the expression is true and executes the code if it is true. **else** is a dependent comparison that is run when all if and elif statements fail to run. **elif** (else + if) is another dependent comparison that, when used with **if**, provides a way to implement alternatives logically.
 
 ```rust
-var int: IQ = 85;
+var i32: IQ = 85;
 var str: smartness;
 
 if (x > IQ) {
@@ -184,7 +184,7 @@ The **switch** statement evaluates the provided expression and compares it with 
 If there is a match, the statements of the label are executed. The code runs until it finds a **break;** statement, and if none of the labels match, the **default** label is invoked.
 
 ```rust
-var int: options = 2;
+var i32: options = 2;
 var str: operation;
 
 switch (options) {
@@ -221,7 +221,7 @@ Custom errors can be defined using the **err** keyword, and custom components/in
 ```rust
 err WindowCoordinatesExceeded {
     str: platform;
-    int[]: window_init_flags;
+    i32[]: window_init_flags;
 }
 ```
 
@@ -232,8 +232,8 @@ Structures (structs) in Nex allow you to group related data together. Use the **
 
 ```rust
 struct Point {
-    int: x;
-    int: y;
+    i32: x;
+    i32: y;
 }
 
 : fn main () {
