@@ -77,7 +77,7 @@ i32: fn sum_xy (i32: x, i32: y) {
 ```
 
 ## Classes and Attributes
-To define classes, use the **class** keyword. Classes are reproducible objects and have two functions, __init__ and __free_, by default. __init__ is called when the class is instantiated, and **__free__** is called when the class is freed. A class can have its methods and components (functions and variables) defined with an access specifier (`pub`, `priv`). They can `ext` (extend and be extended) other classes and attributes.
+To define classes, use the **class** keyword. Classes are reproducible objects and have two functions, __init__ and __free_, by default. __init__ is called when the class is instantiated, and __free__ is called when the class is freed. A class can have its methods and components (functions and variables) defined with an access specifier (`pub`, `priv`). They can `ext` (extend and be extended) other classes and attributes.
 
 ```rust
 class A {
