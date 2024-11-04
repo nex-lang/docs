@@ -77,7 +77,7 @@ i32: fn sum_xy (i32: x, i32: y) {
 ```
 
 ## Classes and Attributes
-To define classes, use the **class** keyword. Classes are reproducible objects and have two functions, **__init__** and **__free__**, by default. **__init__** is called when the class is instantiated, and **__free__** is called when the class is freed. A class can have its methods and components (functions and variables) defined with an access specifier (`pub`, `priv`). They can `ext` (extend and be extended) other classes and attributes.
+To define classes, use the **class** keyword. Classes are reproducible objects and have two functions, __init__ and __free_, by default. __init__ is called when the class is instantiated, and **__free__** is called when the class is freed. A class can have its methods and components (functions and variables) defined with an access specifier (`pub`, `priv`). They can `ext` (extend and be extended) other classes and attributes.
 
 ```rust
 class A {
@@ -87,7 +87,7 @@ class A {
 }
 ```
 
-Attributes are a group of methods and components that can be extended by both attributes and classes (Note: attributes can't extend classes). To define them, use the **attr** keyword. Attributes don't have **__init__** or **__free__** functions and just provide a group of methods and components for others to build upon.
+Attributes are a group of methods and components that can be extended by both attributes and classes (Note: attributes can't extend classes). To define them, use the **attr** keyword. Attributes don't have __init__ or __free__ functions and just provide a group of methods and components for others to build upon.
 
 ```rust
 attr having_component_2 {
@@ -116,7 +116,7 @@ class B ext attr.having_component_2, A;
 Nex supports two major types of loops, **for** and **while**, which allow for repetition of a code block. Both loops support the **break** statement, which tells the program to exit the loop, and **continue**, which skips to the next iteration. The **break; continue;** statements are commonly used in combination with other control statements.
 
 ### For Loop
-A for loop can be declared using the **for** keyword followed by certain conditions according to specific requirements. Nex supports classic **initial; compare; update** and iterative loops like in Python.
+A for loop can be declared using the **for** keyword followed by certain conditions according to specific requirements. Nex supports classic **ial; compare; update** and iterative loops like in Python.
 
 #### Generic For Loops
 This loop consists of 3 expressions at its core: **initial; compare; update**. The loop starts off by executing the initialization expression, and the comparison expression is checked. If the comparison is false, the loop runs, and the update expression is executed. This process goes on until the comparison expression is true.
